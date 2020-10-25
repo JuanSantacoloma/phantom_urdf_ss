@@ -11,15 +11,13 @@
 
   <!-- Robot description -->
   
-  <link name="base_link">
-    
-  </link>
+  <link name="world"/>  <!-- Base link from Gazebo-->
 
-  <joint name="joint_name" type="fixed">
-    <parent link="base_link"/>
+  <joint name="fixed" type="fixed"> <!-- Joint to fix the base so it does not move-->
+    <parent link="world"/>
     <child link="${link_00_name}"/>
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </joint>
+
 
   <xacro:m_link_mesh name="${link_00_name}"
     origin_xyz="0 0 0"

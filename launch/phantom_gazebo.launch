@@ -2,7 +2,7 @@
 <launch>
 
 		<!-- Robot Model -->
-        <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find phantom_urdf_ss)/urdf/phatomx_description.xacro'" />
+        <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find phantom_urdf_ss)/urdf/phantom_description_gazebo.xacro'" />
 		<arg name="x" default="0"/>
 		<arg name="y" default="0"/>
 		<arg name="z" default="0"/>
