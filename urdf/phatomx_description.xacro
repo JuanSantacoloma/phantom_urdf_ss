@@ -25,10 +25,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/PincherBase_v8.stl"
-    mass="0.7"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"	
+    mass="0.335"
+    ixx="0.001" ixy="0" ixz="0"
+    iyy="0.002" iyz="0"
+    izz="0.001"	
   />
 <!--  -->
   <xacro:m_joint name="${joint_01_name}" 
@@ -43,10 +43,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/ShoulderServo_v5.stl"
-    mass="0.7"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"
+    mass="0.118"
+    ixx="0.00" ixy="0" ixz="0"
+    iyy="0.00" iyz="0"
+    izz="0.00"
   />
 <!--  -->
   <xacro:m_joint name="${joint_02_name}" 
@@ -61,10 +61,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/LowerArm_v2.stl"
-    mass="0.3"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"
+    mass="0.162"
+    ixx="0.001" ixy="0" ixz="0"
+    iyy="0.001" iyz="0"
+    izz="0.0"
   />
 <!--  -->
   <xacro:m_joint name="${joint_03_name}" 
@@ -79,10 +79,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/UpperArm_v2.stl"
-    mass="0.2"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"	
+    mass="0.162"
+    ixx="0.001" ixy="0" ixz="0"
+    iyy="0.001" iyz="0"
+    izz="0.0"	
   />
 <!--  -->
   <xacro:m_joint name="${joint_04_name}" 
@@ -97,10 +97,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/GripperBody_v4.stl"
-    mass="0.2"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"	
+    mass="0.160"
+    ixx="0.0" ixy="0" ixz="0"
+    iyy="0.0" iyz="0"
+    izz="0.0"	
   />
 <!--  -->
 
@@ -134,10 +134,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/LeftFinger_v2.stl"
-    mass="0.05"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"	
+    mass="0.018"
+    ixx="0.0" ixy="0" ixz="0"
+    iyy="0.0" iyz="0"
+    izz="0.0"	
   />
 <!--  -->
   <xacro:m_joint_mimic name="${joint_06_name}" 
@@ -153,10 +153,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/LeftFinger_v2.stl"
-    mass="0.05"
-    ixx="0.01" ixy="0" ixz="0"
-    iyy="0.01" iyz="0"
-    izz="0.01"	
+    mass="0.018"
+    ixx="0.0" ixy="0" ixz="0"
+    iyy="0.0" iyz="0"
+    izz="0.0"		
   />
 
    <!-- Gazebo Plugin -->
