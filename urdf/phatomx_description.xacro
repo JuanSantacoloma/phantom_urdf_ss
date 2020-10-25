@@ -25,10 +25,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/PincherBase_v8.stl"
-    mass="0.00272"
-    ixx="0.00000006" ixy="0" ixz="0"
-    iyy="0.000000082" iyz="0"
-    izz="0.00000008"	
+    mass="0.7"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"	
   />
 <!--  -->
   <xacro:m_joint name="${joint_01_name}" 
@@ -43,10 +43,10 @@
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/ShoulderServo_v5.stl"
-    mass="0.002268"
-    ixx="0.0000000181" ixy="0" ixz="0"
-    iyy="0.000000125" iyz="0"
-    izz="0.000000127"	
+    mass="0.7"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"
   />
 <!--  -->
   <xacro:m_joint name="${joint_02_name}" 
@@ -54,17 +54,17 @@
     axis_xyz="0 1 0"
     origin_rpy="0 0 0" origin_xyz="0 0 4.2"
     parent="${link_01_name}" child="${link_02_name}"
-    limit_e="100" limit_l="-3.14" limit_u="3.14" limit_v="0.5" 
+    limit_e="100" limit_l="-2.2" limit_u="2.4" limit_v="0.5" 
   />
 
   <xacro:m_link_mesh name="${link_02_name}"
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/LowerArm_v2.stl"
-    mass="0.002268"
-    ixx="0.0000000181" ixy="0" ixz="0"
-    iyy="0.000000125" iyz="0"
-    izz="0.000000127"	
+    mass="0.3"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"
   />
 <!--  -->
   <xacro:m_joint name="${joint_03_name}" 
@@ -72,17 +72,17 @@
     axis_xyz="0 1 0"
     origin_rpy="0 0 0" origin_xyz="0 0 10.5"
     parent="${link_02_name}" child="${link_03_name}"
-    limit_e="100" limit_l="-3.14" limit_u="3.14" limit_v="0.5" 
+    limit_e="100" limit_l="-2.6" limit_u="2.6" limit_v="0.5" 
   />
 
   <xacro:m_link_mesh name="${link_03_name}"
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/UpperArm_v2.stl"
-    mass="0.002268"
-    ixx="0.0000000181" ixy="0" ixz="0"
-    iyy="0.000000125" iyz="0"
-    izz="0.000000127"	
+    mass="0.2"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"	
   />
 <!--  -->
   <xacro:m_joint name="${joint_04_name}" 
@@ -90,17 +90,17 @@
     axis_xyz="0 1 0"
     origin_rpy="0 0 0" origin_xyz="0 0 10.5"
     parent="${link_03_name}" child="${link_04_name}"
-    limit_e="100" limit_l="-3.14" limit_u="3.14" limit_v="0.5" 
+    limit_e="100" limit_l="-1.9" limit_u="1.8" limit_v="0.5" 
   />
 
   <xacro:m_link_mesh name="${link_04_name}"
     origin_xyz="0 0 0"
     origin_rpy="0 0 0" 
     meshfile="package://phantom_urdf_ss/meshes/GripperBody_v4.stl"
-    mass="0.002268"
-    ixx="0.0000000181" ixy="0" ixz="0"
-    iyy="0.000000125" iyz="0"
-    izz="0.000000127"	
+    mass="0.2"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"	
   />
 <!--  -->
 
@@ -122,6 +122,48 @@
     iyy="0.000000125" iyz="0"
     izz="0.000000127"	
   /> -->
+  <xacro:m_joint name="${joint_05_name}" 
+    type="prismatic"
+    axis_xyz="0 1 0"
+    origin_rpy="0 0 0" origin_xyz="0 -3 7"
+    parent="${link_04_name}" child="${link_05_name}"
+    limit_e="10" limit_l="0" limit_u="1.6" limit_v="5.0" 
+  />
+
+  <xacro:m_link_mesh name="${link_05_name}"
+    origin_xyz="0 0 0"
+    origin_rpy="0 0 0" 
+    meshfile="package://phantom_urdf_ss/meshes/LeftFinger_v2.stl"
+    mass="0.05"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"	
+  />
+<!--  -->
+  <xacro:m_joint_mimic name="${joint_06_name}" 
+    type="prismatic"
+    axis_xyz="0 1 0"
+    origin_rpy="0 0 3.14" origin_xyz="0 3 7"
+    parent="${link_04_name}" child="${link_06_name}"
+    limit_e="100" limit_l="0" limit_u="1.6" limit_v="0.5"
+    mimic_joint="${joint_05_name}" m_multiplier="1" m_offset="0" 
+  />
+
+  <xacro:m_link_mesh name="${link_06_name}"
+    origin_xyz="0 0 0"
+    origin_rpy="0 0 0" 
+    meshfile="package://phantom_urdf_ss/meshes/LeftFinger_v2.stl"
+    mass="0.05"
+    ixx="0.01" ixy="0" ixz="0"
+    iyy="0.01" iyz="0"
+    izz="0.01"	
+  />
+
+   <!-- Gazebo Plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    </plugin>
+  </gazebo>
 
   <!-- <xacro:create_noa name="NOA"
     origin_xyz="2 0 0"
