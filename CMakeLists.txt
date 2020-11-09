@@ -10,6 +10,9 @@ project(phantom_urdf_ss)
 find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   rospy
+  controller_manager
+  joint_state_controller
+  robot_state_publisher
 )
 
 ## System dependencies are found with CMake's conventions
