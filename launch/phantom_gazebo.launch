@@ -22,11 +22,16 @@
 			gripper_position_controller
 		    --timeout 60">
 		</node>
+		<!-- State publisher -->
+    	<node 
+			name="robot_state_publisher" 
+			pkg="robot_state_publisher" 
+			type="robot_state_publisher"/>
 
 		<node 
-        name="joint_state_publisher" 
-        pkg="joint_state_publisher" 
-        type="joint_state_publisher" />
+        	name="joint_state_publisher" 
+        	pkg="joint_state_publisher" 
+        	type="joint_state_publisher" />
 
 		<!-- Gazebo Initialization -->
 		<include file="$(find gazebo_ros)/launch/empty_world.launch">
